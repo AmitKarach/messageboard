@@ -34,3 +34,7 @@ solution*
 *.app
 demo
 test
+Board.o
+main.cpp
+makefile_1
+.vscode

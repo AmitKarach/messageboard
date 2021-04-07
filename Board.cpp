@@ -9,10 +9,12 @@ namespace ariel
         if (dierction == Direction::Horizontal)
         {
             maxcols= max(maxcols,column+ unsigned(message.length()));
+            maxrow = max(maxrow,row);
         }
         else
         {
             maxrow = max(maxrow,row+ unsigned(message.length()));
+            maxcols= max(maxcols,column);
         }
         minrow= min(minrow,row);
         mincols=min(mincols,column);
@@ -28,7 +30,8 @@ namespace ariel
             {
                 row++;
             }         
-        }       
+        }   
+            
     }
 
     string Board::read(unsigned int row, unsigned int column, Direction dierction, unsigned int howMuch )
@@ -58,11 +61,18 @@ namespace ariel
 
     void Board::show()
     {
-        for (unsigned int i = minrow; i < maxrow; i++)
+        for (unsigned int i = minrow; i <= maxrow; i++)
         {
             for (unsigned int j = mincols; j < maxcols; j++)
             {
-                cout << board[i][j] <<" ";    
+                if (!board[i][j].empty())
+                {
+                    cout << board[i][j];
+                }
+                else{
+                    cout << "_";
+                }
+                    
             }
             cout<<endl;
         }
