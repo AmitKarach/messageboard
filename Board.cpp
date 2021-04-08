@@ -8,12 +8,12 @@ namespace ariel
     {
         if (dierction == Direction::Horizontal)
         {
-            maxcols= max(maxcols,column+ unsigned(message.length()));
+            maxcols= max(maxcols,column+ unsigned(message.length()-1));
             maxrow = max(maxrow,row);
         }
         else
         {
-            maxrow = max(maxrow,row+ unsigned(message.length()));
+            maxrow = max(maxrow,row+ unsigned(message.length()-1));
             maxcols= max(maxcols,column);
         }
         minrow= min(minrow,row);
