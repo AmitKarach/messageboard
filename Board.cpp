@@ -63,7 +63,7 @@ namespace ariel
     {
         for (unsigned int i = minrow; i <= maxrow; i++)
         {
-            for (unsigned int j = mincols; j < maxcols; j++)
+            for (unsigned int j = mincols; j <= maxcols; j++)
             {
                 if (!board[i][j].empty())
                 {
