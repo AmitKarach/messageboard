@@ -2,6 +2,7 @@
 #include "Board.hpp"
 using namespace std;
 
+
 namespace ariel
 {
     //here we are posting a note on the board
